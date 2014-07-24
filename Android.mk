@@ -96,7 +96,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(ri_bcprov_src_files)
 LOCAL_JAVACFLAGS := -encoding UTF-8
 LOCAL_MODULE_TAGS := optional
-include $(BUILD_HOST_JAVA_LIBRARY)
+include $(BUILD_SYSTEM)/host_java_library.mk
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := bouncycastle-bcpkix-host
@@ -105,4 +105,4 @@ LOCAL_SRC_FILES := $(call all-java-files-under,bcpkix/src/main/java)
 LOCAL_JAVACFLAGS := -encoding UTF-8
 LOCAL_MODULE_TAGS := optional
 LOCAL_JAVA_LIBRARIES := bouncycastle-host
-include $(BUILD_HOST_JAVA_LIBRARY)
+include $(BUILD_SYSTEM)/host_java_library.mk
